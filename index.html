@@ -2,46 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bean Haven Café</title>
+<head>
+
+  <!doctype html>
+<html lang="en">
+<head>
+  <!-- 1. Character set -->
+  <meta charset="utf-8">
+
+  <!-- 2. Viewport for responsive/mobile-first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 3. Page title -->
+  <title>Blue Haven Cafe</title>
+
+  <!-- 4. Link to stylesheet -->
   <link rel="stylesheet" href="styles/main.css">
+
+  <!-- 5. Optional: fallback font hint -->
+  <meta name="description" content="Welcome to Blue Haven Café- where comfort meets coffee. Fresh brews, cozy vibes, and delicious bites.">
 </head>
 <body>
-  <header>
-    <h1>Bean Haven Café</h1>
-    <nav>
-      <ul>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+  <!-- 6. Header with navigation -->
+  <header class="site-header"  role="banner">
+    <div class="brand">
+      <a href="#" class="logo">Blue Haven Café</a>
+    </div>
+
+    <!-- 7. Mobile nav toggle (checkbox) -->
+    <input id="nav-toggle" type="checkbox" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="menu-icon" aria-label="Open menu">☰</label>
+
+    <!-- 8. Navigation links -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#menu">Menu</a></li>
+  <li><a href="#gallery">Gallery</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
     </nav>
   </header>
 
-  <main>
-    <section id="menu">
-      <h2>Our Coffee Menu</h2>
-      <ul>
-        <li><strong>Cappuccino</strong> – Steamed milk & espresso</li>
-        <li><strong>Latte</strong> – Espresso with creamy milk</li>
-        <li><strong>Espresso</strong> – Strong and bold</li>
-      </ul>
-    </section>
+  <!-- 9. Main content -->
+<main class="site-main" role="main">
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Welcome to Bean Haven — your cozy local café serving freshly brewed coffee and smiles every day!</p>
-      <img src="images/cafe.jpg" alt="Inside Bean Haven Café">
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <picture>
+      <source srcset="images/hero-large.jpg 1600w, images/hero-med.jpg 800w, images/hero-small.jpg 400w"
+              sizes="(max-width:768px) 100vw, (max-width:1024px) 80vw, 1200px">
+      <img src="images/hero-small.jpg" alt="Blue Haven Café " loading="lazy" class="hero-img">
+    </picture>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: hello@beanhaven.local | Phone: +91 98765 43210</p>
-    </section>
+    <div class="hero-content">
+      <h1>Welcome to <span style="color: var(--secondary);">Blue Haven Café</span></h1>
+      <p>Enjoy aromatic coffee, freshly baked pastries, and cozy vibes in every sip.</p>
+      <a class="button" href="#menu">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu / Features Section -->
+  <section id="menu" class="features">
+    <h2>Our Menu</h2>
+    <p>Try our most-loved items, freshly prepared every day:</p>
+    <ul>
+      <li>☕ <strong>Cappuccino</strong> — Smooth & creamy</li>
+      <li>🫐 <strong>Blueberry Cheesecake</strong> — House favorite</li>
+      <li>🥪 <strong>Grilled Veggie Sandwich</strong> — Perfect lunch bite</li>
+    </ul>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Our Café Gallery</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/item1-small.jpg" alt="Latte art coffee" loading="lazy">
+        <h3>Signature Latte</h3>
+        <p>Perfectly crafted foam design.</p>
+      </article>
+      <article class="card">
+        <img src="images/item2-small.jpg" alt="Blueberry Cheesecake" loading="lazy">
+        <h3>Blueberry Cheesecake</h3>
+        <p>Freshly baked daily.</p>
+      </article>
+      <article class="card">
+        <img src="images/item3-small.jpg" alt="Sandwich platter" loading="lazy">
+        <h3>Grilled Sandwiches</h3>
+        <p>Made with whole-grain bread.</p>
+      </article>
+      <article class="card">
+        <img src="images/item4-small.jpg" alt="Café interior" loading="lazy">
+        <h3>Café Interior</h3>
+        <p>Warm and cozy space for everyone.</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+    <!-- 10. Features/Info section -->
+    <section id="menu" class="features">
+  <h2>Our Menu</h2>
+  <p>Try our most-loved items, freshly prepared every day:</p>
+  <ul>
+    <li>☕ Cappuccino – Smooth & creamy</li>
+    <li>🍰 Blueberry Cheesecake – House favorite</li>
+    <li>🥪 Grilled Veggie Sandwich – Perfect lunch bite</li>
+  </ul>
+</section>
+
+    <!-- 11. Gallery using CSS grid -->
+    <section id="gallery" class="gallery">
+  <h2>Our Café Gallery</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="images/cafe1.jpg" alt="Coffee latte art" loading="lazy">
+      <h3>Latte Art</h3>
+      <p>Perfectly crafted foam art by our baristas.</p>
+    </article>
+    <article class="card">
+      <img src="images/cafe2.jpg" alt="Pastries display" loading="lazy">
+      <h3>Pastry Corner</h3>
+      <p>Freshly baked croissants and cakes daily.</p>
+    </article>
+    <article class="card">
+      <img src="images/cafe3.jpg" alt="Interior view" loading="lazy">
+      <h3>Cozy Interiors</h3>
+      <p>Relax and unwind in our warm ambiance.</p>
+    </article>
+    <article class="card">
+      <img src="images/cafe4.jpg" alt="Coffee beans" loading="lazy">
+      <h3>Our Beans</h3>
+      <p>Premium beans sourced from local farms.</p>
+    </article>
+  </div>
+</section>
+  
+
   </main>
 
-  <footer>
-    <p>© 2025 Bean Haven Café</p>
+  <!-- 12. Footer -->
+  <footer class="site-footer container" role="contentinfo" id="contact">
+    <p>© <span id="year"></span> BlueHaven — Contact: bluehavencafe@gmail.com</p>
   </footer>
+
+  <!-- 13. Small script for year & optional nav close on link click -->
+  <script>
+    // Set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Close mobile nav when a link is clicked (improves UX)
+    document.querySelectorAll('.nav-links a').forEach(function(a){
+      a.addEventListener('click', function(){ document.getElementById('nav-toggle').checked = false; });
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+ 
