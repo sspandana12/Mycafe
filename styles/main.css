@@ -1,75 +1,217 @@
-/* main.css */
-
-body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+/* 1. Global resets */
+* {
   margin: 0;
-  background-color: #b39289;
-  color: #811f1f;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  background-color: #936050;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-}
-nav ul {
-  list-style: none;
   padding: 0;
-  margin-top: 0.5rem;
-}
-nav li {
-  display: inline-block;
-  margin: 0 10px;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
+  box-sizing: border-box;
 }
 
-/* Main sections */
-main {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-h2 {
-  color: #5d4037;
-  margin-bottom: 0.5rem;
-}
-ul {
-  padding-left: 1.25rem;
+/* 2. Root color theme */
+:root {
+  --primary: #4b2305;       /* Deep blue */
+  --secondary: #d8a25e;     /* Warm caramel */
+  --accent: #fffaf3;        /* Creamy beige background */
+  --text-dark: #2e2e2e;
+  --text-light: #b19696;
 }
 
-/* Image styling */
+/* 3. Base styles */
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: var(--accent);
+  color: var(--text-dark);
+}
+
 img {
-  max-width: 100%;
+  width: 100%;
+  display: block;
   border-radius: 8px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* 4. Header + navigation */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: var(--primary);
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--secondary);
+}
+
+/* Mobile nav icon */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* 5. Hero section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.hero-img {
+  height: 80vh;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e3a24b;
+}
+
+/* 6. Menu (Features) section */
+.features {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: var(--accent);  /* add this line */
+  position: relative;
+  z-index: 2;
+}
+
+.features h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.features ul {
+  list-style: none;
   margin-top: 1rem;
 }
 
-/* Footer */
-footer {
-  background-color: #fff;
-  color: #777;
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid #ddd;
+.features li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-  nav li {
-    display: block;
-    margin: 5px 0;
-  }
+/* 7. Gallery */
+.gallery {
+  background-color: #fff;
+  padding: 4rem 1rem;
 }
+
+.gallery h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 8. Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--primary);
+  color: var(--text-light);
+  margin-top: 2rem;
+}
+
+/* 9. Responsive tweaks */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-toggle:checked + .menu-icon + .nav {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}       
+
