@@ -1,0 +1,22 @@
+.ui-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.ui-modal__content {
+  background: var(--color-accent);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  max-width: 450px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+/* When modal is active */
+.ui-modal.active {
+  display: flex;
+}

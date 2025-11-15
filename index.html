@@ -12,6 +12,8 @@
     name="description"
     content="Welcome to Blue Haven Café – where comfort meets coffee. Fresh brews, cozy vibes, and delicious pastries await you."
 >
+<link rel="stylesheet" href="styles/tokens.css">
+
 </head>
 
 <body>
@@ -171,6 +173,55 @@
     </section>
 
   </main>
+
+
+<section class="ui-demo">
+  <h2>UI Library – Buttons</h2>
+  <button class="ui-btn ui-btn--primary">Primary Button</button>
+  <button class="ui-btn ui-btn--outline">Outline Button</button>
+  <button class="ui-btn" disabled>Disabled Button</button>
+</section>
+
+
+<section class="ui-demo">
+  <h2>UI Library – Card Component</h2>
+
+  <div class="ui-card">
+    <img src="images/item1-small.jpg" alt="Sample">
+    <h3 class="ui-card__title">Card Title</h3>
+    <p class="ui-card__text">This is a reusable card component.</p>
+  </div>
+</section>
+
+
+<section class="ui-demo">
+  <h2>UI Library – Form Inputs</h2>
+
+  <label class="ui-label" for="demo-name">Name</label>
+  <input id="demo-name" class="ui-input" type="text">
+
+  <label class="ui-label" for="demo-email">Email</label>
+  <input id="demo-email" class="ui-input" type="email">
+
+  <p class="ui-error">Example error message</p>
+</section>
+
+
+
+
+<section class="ui-demo">
+  <h2>UI Library – Modal Component</h2>
+  <button id="open-ui-modal" class="ui-btn ui-btn--primary">Open Modal</button>
+</section>
+
+<div id="ui-modal" class="ui-modal">
+  <div class="ui-modal__content">
+    <h2>UI Library Modal</h2>
+    <p>This is a reusable modal component.</p>
+    <button id="close-ui-modal" class="ui-btn ui-btn--outline">Close</button>
+  </div>
+</div>
+
 
 
   <!-- FOOTER -->

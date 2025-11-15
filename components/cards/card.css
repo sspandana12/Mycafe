@@ -1,0 +1,23 @@
+.ui-card {
+  background: var(--color-accent);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.ui-card__title {
+  margin-top: var(--space-sm);
+  font-size: 1.3rem;
+  color: var(--color-primary);
+}
+
+.ui-card__text {
+  margin: var(--space-sm) 0;
+  font-size: 1rem;
+}
+
+.ui-card:hover {
+  box-shadow: var(--shadow-lg);
+}

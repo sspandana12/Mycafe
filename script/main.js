@@ -69,3 +69,15 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     document.getElementById("nav-toggle").checked = false;
   });
 });
+
+// UI Library modal
+const openUIModal = document.getElementById("open-ui-modal");
+const closeUIModal = document.getElementById("close-ui-modal");
+const uiModal = document.getElementById("ui-modal");
+
+if (openUIModal) {
+  openUIModal.addEventListener("click", () => uiModal.classList.add("active"));
+}
+if (closeUIModal) {
+  closeUIModal.addEventListener("click", () => uiModal.classList.remove("active"));
+}
